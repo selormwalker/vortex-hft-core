@@ -1,0 +1,7 @@
+numpy
+pandas
+ujson
+httpx
+python-dotenv
+rich
+msgpack
