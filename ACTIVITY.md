@@ -30,3 +30,6 @@ VORTEX_LOG: Synchronized the core with the latest FIX protocol standards.
 TIMESTAMP: Sun May 10 11:00:30 UTC 2026
 VORTEX_LOG: Implemented logic for adaptive position sizing and dynamic hedging.
 ---
+TIMESTAMP: Sun May 10 13:18:18 UTC 2026
+VORTEX_LOG: Refined the terminal output for real-time order-book monitoring.
+---
