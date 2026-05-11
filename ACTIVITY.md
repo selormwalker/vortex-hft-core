@@ -75,3 +75,6 @@ ACTIVITY: Patched a potential race condition in the asynchronous task scheduler.
 TIMESTAMP: Mon May 11 14:31:35 UTC 2026
 ACTIVITY: Reduced the baseline memory footprint of worker processes by 15%.
 ---
+TIMESTAMP: Mon May 11 17:10:44 UTC 2026
+ACTIVITY: Updated the technical architecture docs to reflect recent infrastructure changes.
+---
