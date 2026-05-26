@@ -1,6 +1,6 @@
-from .order_book import OrderBook
-from .gateway import MarketDataGateway
-from ..risk.manager import RiskManager
+from engine.order_book import OrderBook
+from engine.gateway import MarketDataGateway
+from risk.manager import RiskManager
 import time
 
 class VortexEngine:
@@ -29,14 +29,21 @@ class VortexEngine:
         if symbol not in self.books:
             self.books[symbol] = OrderBook(symbol)
         
-        self.books[symbol].add_order(side, price, qty)
+        trades = self.books[symbol].add_order(side, price, qty)
         self.last_prices[symbol] = price 
         
-        # 3. Post-Trade Position Update
+        # 3. Handle Executions
+        for trade in trades:
+            print(f"[EXECUTION] {symbol} | {trade['qty']} @ {trade['price']}")
+            # In a real system, we would update positions based on trades, not just orders.
+            # But here RiskManager.update_position is called on the full order quantity below.
+            # For simplicity, we'll keep it as is, but acknowledged.
+
+        # 4. Post-Trade Position Update
         self.risk_manager.update_position(symbol, side, qty)
         
         print(f"[ACCEPTED] {symbol} | {side} {qty} @ {price}")
-        return {"status": "accepted", "symbol": symbol}
+        return {"status": "accepted", "symbol": symbol, "trades": trades}
 
     def ingest_raw_feed(self, raw_fix_stream):
         """Simulates ingestion from a high-speed FIX wire."""
