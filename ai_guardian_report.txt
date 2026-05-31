@@ -1,0 +1,16 @@
+Error reviewing .\__init__.py: 'NoneType' object has no attribute 'models'
+Error reviewing .\engine\gateway.py: 'NoneType' object has no attribute 
+'models'
+Error reviewing .\engine\main.py: 'NoneType' object has no attribute 'models'
+Error reviewing .\engine\order_book.py: 'NoneType' object has no attribute 
+'models'
+Error reviewing .\engine\__init__.py: 'NoneType' object has no attribute 
+'models'
+Error reviewing .\risk\manager.py: 'NoneType' object has no attribute 'models'
+Error reviewing .\risk\__init__.py: 'NoneType' object has no attribute 'models'
+Error reviewing .\tests\test_engine.py: 'NoneType' object has no attribute 
+'models'
+Error reviewing .\tests\test_vortex.py: 'NoneType' object has no attribute 
+'models'
+Error reviewing .\tests\__init__.py: 'NoneType' object has no attribute 
+'models'
