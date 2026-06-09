@@ -831,3 +831,6 @@ System heartbeat: 2026-06-09 17:20:25 - Optimized internal logic and verified ec
 TIMESTAMP: Tue Jun  9 17:49:19 UTC 2026
 ACTIVITY: Enhanced the visual polish of the CLI output for a better developer experience.
 ---
+TIMESTAMP: Tue Jun  9 19:51:33 UTC 2026
+ACTIVITY: Refactored shared utility modules for better maintainability and reuse.
+---
